@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <title>Sloupcový layout</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,100&amp;subset=latin,greek-ext" rel="stylesheet" type="text/css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        h2 {
+            margin: 0;
+
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-size: 40px;
+        }
+
+        p, a {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #08c;
+        }
+
+        .flexbox {
+            display: flex;
+
+            margin: 0 10%
+        }
+
+        .col {
+            margin: 0;
+            padding: 80px 50px;
+
+            flex: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div style="text-align: center; margin: 50px 0;">
+        <h2 style="font-size: 50px;">Sloupcový layout webových stránek</h2>
+        <p>Aneb jak programovat se stylem</p>
+    </div>
+
+    <div class="flexbox">
+        <div class="col" style="
+            background-image: url(http://images.apple.com/v/ipad-pro/d/images/overview/expand_large.jpg);
+            background-size: cover;
+        "></div>
+        <div class="col">
+            <h2>Skvělé způsoby, jak rozšířit možnosti iPadu Pro.</h2>
+            <p>S doplňky navrženými na míru možnostem a výkonu iPadu Pro můžete být ještě kreativnější a produktivnější. Projděte si nabídku krytů, klávesnic a dalších doplňků.</p>
+            <a href="#">Doplňky k iPadu</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>I ke Squarespace se dostaneme</h2>
+        <p>Ale jen text bez obrázků, na to není čas</p>
+    </div>
+
+    <div class="flexbox">
+        <div class="col">
+            <h2>Powerful yet simple</h2>
+            <p>Creating your website with Squarespace is a simple, intuitive process. Just add and arrange your content and features anywhere you want with the click of a mouse.</p>
+        </div>
+        <div class="col">
+            <h2>A Custom Domain</h2>
+            <p>Squarespace makes adding a custom domain to your site simple, and every annual account receives a custom domain for free for a year.</p>
+        </div>
+        <div class="col">
+            <h2>Serious eCommerce</h2>
+            <p>Design a best-in-class online storefront with award-winning templates, customizable settings, shoppable lookbooks, and more — all without a single plug-in.</p>
+        </div>
+    </div>
+
+    <p style="margin-bottom: 100px; text-align: center;">Díky za pozornost, snad vás to alepoň trochu nadchlo.</p>
+    
+</body>
+</html>

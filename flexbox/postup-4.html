@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <title>Sloupcový layout</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,100&amp;subset=latin,greek-ext" rel="stylesheet" type="text/css">
+
+    <style>
+
+        body {
+            margin: 0; /* aby byl obsah až k okrajům obrazovky */
+            font-family: sans-serif; /* hezčí písma */
+        }
+
+        h2 {
+            margin: 0;
+
+            font-family: "Roboto", sans-serif;
+            font-weight: 100; /* jemný */
+            font-size: 40px;
+        }
+
+        p, a {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300; /* tenký */
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #08c;
+        }
+
+        /* třída pro flexbox */
+        .flexbox {
+            display: flex;
+
+            margin: 0 10%
+        }
+
+        /* třída pro sloupec */
+        .col {
+            margin: 0;
+            padding: 80px 50px;
+
+            flex: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- rodičovský div - flexbox -->
+    <div class="flexbox">
+
+        <!-- první sloupec (column) -->
+        <div class="col" style="
+            background-image: url(http://images.apple.com/v/ipad-pro/d/images/overview/expand_large.jpg);
+            background-size: cover;
+        "></div>
+
+        <!-- druhý sloupec -->
+        <div class="col">
+            <h2>Skvělé způsoby, jak rozšířit možnosti iPadu Pro.</h2>
+            <p>S doplňky navrženými na míru možnostem a výkonu iPadu Pro můžete být ještě kreativnější a produktivnější. Projděte si nabídku krytů, klávesnic a dalších doplňků.</p>
+            <a href="#">Doplňky k iPadu</a>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

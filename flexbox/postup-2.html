@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <title>Sloupcový layout</title>
+
+    <style>
+
+        body {
+            margin: 0; /* aby byl obsah až k okrajům obrazovky */
+            font-family: sans-serif; /* hezčí písma */
+        }
+
+        /* třída pro flexbox */
+        .flexbox {
+            display: flex; /* udělá z elementu flexbox */
+        }
+
+        /* třída pro sloupec */
+        .col {
+            /* několik stylů, aby byl vidět */
+            margin: 10px;
+            padding: 10px;
+            background: #ddd;
+
+            /* roztáhne elementy do zbývajícího prostoru */
+            flex: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- rodičovský div - flexbox -->
+    <div class="flexbox">
+
+        <!-- první sloupec (column) -->
+        <div class="col">
+            První sloupec
+        </div>
+
+        <!-- druhý sloupec -->
+        <div class="col">
+            Druhý sloupec
+        </div>
+        
+    </div>
+    
+</body>
+</html>
