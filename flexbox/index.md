@@ -128,7 +128,7 @@ Pro načtení písma přidáme link do hlavičky dokumentu:
     <title>Sloupcový layout</title>
 
     <!-- tenhle řádek: -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100&amp;subset=latin,greek-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
     <style> /* ... naše styly ... */ </style>
 </head>
