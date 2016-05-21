@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article generator</title>
+
+    <!-- Lora -->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Raleway -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,500,400italic,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Montserrat -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Playfair Display -->
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Open Sans -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,700,600,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .preview .body {
+            position: relative;
+            padding-top: 50px;
+            min-height: 100vh;
+        }
+
+        /* make sure title's margin won't make a white strip on top of the document */
+        .preview .body:before {
+            content: "";
+            display: block;
+            height: 1px;
+        }
+
+        #info {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 10px;
+            left: 0;
+            width: 100%;
+
+            text-align: center;
+            font-family: monospace;
+            font-weight: 400;
+            font-size: 16px;
+            color: black;
+
+            z-index: 100;
+        }
+
+    </style>
+
+    <p id="info">Press spacebar or refresh to see new style!</p>
+
+    <style id="styleInput"></style>
+
+    <div class="preview">
+        <div class="body">
+
+            <div class="wrapper">
+                <h1>Never Show A Design You Haven’t Tested On&nbsp;Users</h1>
+
+                <p>
+                    It isn’t hard to find a UX designer to nag you about testing your designs with actual users. The problem is, we’re not very good at explaining why you should do user testing (or how to find the time). We say it like it’s some accepted, self-explanatory truth that deep down, any decent human knows is the right thing to do. Like “be a good person” or “be kind to animals.” Of course, if it was that self-evident, there would be a lot more user testing in this world.
+                </p>
+
+                <p style="border-left: 3px solid black; padding-left: 1.5em;">
+                    <i>
+                        Some content may be italic, so consider that for the paragraph font as well.
+                    </i>
+                </p>
+
+                <p>
+                    Let me be very <b>specific</b> about why user <i>testing</i> is <b>essential</b>. As long as you’re in the web <b>business</b>, your work will be <i>exposed</i> to users.
+                </p>
+
+                <p>            
+                    If you’re already a user-testing advocate, that may seem obvious, but we often miss something that’s not as clear: how user testing impacts stakeholder communication and how we can ensure testing is built into projects, even when it seems impossible.
+                </p>
+
+                <p>Content taken from alistapart.com</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="Utilities.js"></script>
+    <script src="config.js"></script>
+    <script src="font-pairings.js"></script>
+
+    <!-- article generator -->
+    <script src="ArticleGenerator/core.js"></script>
+    <script src="ArticleGenerator/elementary-generators.js"></script>
+    <script src="ArticleGenerator/compound-generators.js"></script>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
