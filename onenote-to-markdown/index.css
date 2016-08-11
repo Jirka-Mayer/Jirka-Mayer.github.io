@@ -1,0 +1,293 @@
+/*
+    https://coolors.co/80397b-068d9d-80ded9-aeecef-6d9dc5
+ */
+
+body {
+    margin: 0;
+}
+
+.checkbox {
+    font-size: 20px;
+    margin-bottom: 1em;
+}
+
+.radio__label {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*////////////
+// Sections //
+////////////*/
+
+.note {
+    display: flex;
+
+    background: #80397B;
+}
+    .note__box {
+        margin: 100px auto;
+        margin-bottom: -100px;
+        width: 90%;
+        max-width: 1000px;
+    }
+    .note__title {
+        margin: 0;
+
+        color: white;
+        font-size: 90px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+    }
+    .note__sub-title {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 40px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+    }
+
+.settings {
+    display: flex;
+
+    background: #6D9DC5;
+}
+    .settings__box {
+        margin: 100px auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+    .settings__group {
+        display: flex;
+    }
+    .settings__options {
+        display: block;
+        width: 80%;
+        margin-bottom: 10px;
+
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #settings__version-help {
+        color: inherit;
+        cursor: pointer;
+    }
+
+.scard {
+    flex: 1;
+    margin: 15px;
+    padding: 10px;
+
+    background: white;
+    border: 1px solid #818181;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+    .scard__title {
+        margin-bottom: 0.5em;
+
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+    .scard__checkbox {
+        float: right;
+        margin: 0 0 1ex 1ex;
+    }
+    .scard__detail {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.converter {
+    display: flex;
+
+    background: #068D9D;
+}
+    .converter__box {
+        margin: 50px auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+    .converter__in {
+        position: relative;
+        margin: 0 auto;
+        padding: 80px 50px;
+
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+
+        background: white;
+        border: 1px solid #818181;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+        outline: none;
+    }
+    .converter__out {
+        position: relative;
+        margin: 0 auto;
+        padding: 20px 40px;
+        height: 200px;
+        width: 100%;
+        box-sizing: border-box;
+
+        white-space: pre;
+        font-size: 16px;
+        font-weight: 300;
+
+        background: white;
+        border: 1px solid #818181;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+        outline: none;
+
+        overflow: auto;
+        resize: none;
+    }
+        .converter__out::selection {
+            background: rgba(6, 141, 157, 0.3);
+        }
+
+.about {
+    display: flex;
+
+    background: #80DED9;
+}
+    .about__box {
+        margin: 50px auto;
+        margin-bottom: 100px;
+        width: 90%;
+        max-width: 1000px;
+    }
+    .about__p {
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+    .about__ul {
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+    .about__a {
+        color: inherit;
+    }
+
+/*/////////////////////
+// Individual blocks //
+/////////////////////*/
+
+.step {
+    margin: 50px 0;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+    .step_dark {
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+.app {
+    margin: 0 auto;
+    width: 80%;
+
+    background: white;
+    border: 1px solid #818181;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+    .app__bar {
+        height: 40px;
+
+        background: #eee;
+    }
+    .app__tabs {
+        display: flex;
+        align-items: flex-end;
+        height: 40px;
+        padding-left: 100px;
+
+        /*background: #eee;*/
+        border-bottom: 5px solid #80DED9;
+    }
+    .app__tab {
+        margin: 0 5px;
+        width: 100px;
+        height: 35px;
+        background: #e4e4e4;
+
+        border-radius: 5px 5px 0 0;
+    }
+        .app__tab_active {
+            background: #80DED9;
+        }
+    .app__body {
+        display: flex;
+    }
+    .app__textarea {
+        flex: 1;
+        position: relative;
+        padding: 20px 40px;
+        padding-right: 100px;
+
+        border-right: 15px solid #eee;
+    }
+        .app__textarea:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50px;
+            right: -12px;
+            width: 9px;
+            height: 120px;
+
+            background: #ddd;
+        }
+    .app__paragraph {
+        margin-bottom: 20px;
+        
+        color: #bbb;
+        font-size: 7px;
+        font-family: "BLOKKRegular", sans-serif;
+        line-height: 1.4em;
+
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+    .app__selection {
+        padding: 2px;
+        background: rgba(6, 141, 157, 0.3);
+    }
+    @keyframes app__caret{
+        0%    { opacity: 0; }
+        49.9% { opacity: 0; }
+        50%   { opacity: 1; }
+        100%  { opacity: 1; }
+    }
+    .app__caret {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -1.5ex;
+        width: 1px;
+        height: 1.1em;
+
+        background: #888;
+
+        animation-name: app__caret;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    .app__sidebar {
+        width: 200px;
+
+        background: #AEECEF;
+        border-top: 35px solid #80DED9;
+    }

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OneNote to markdown</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="blokk-regular/style.css">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <section class="note">
+        <div class="note__box">
+
+            <h1 class="note__title">OneNote to markdown</h1>
+            <h2 class="note__sub-title">Share your notes with the world<br>not only through OneDrive</h2>
+
+            <div class="step">
+                1. Copy a OneNote content to the clipboard.
+            </div>
+
+            <div class="app">
+                <div class="app__bar"></div>
+                <div class="app__tabs">
+                    <div class="app__tab"></div>
+                    <div class="app__tab app__tab_active"></div>
+                    <div class="app__tab"></div>
+                    <div class="app__tab"></div>
+                </div>
+                <div class="app__body">
+                    <div class="app__textarea">
+                        <div class="app__paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. <span class="app__selection">Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</span>
+                        </div>
+                        <div class="app__paragraph">
+                            <span class="app__selection">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                            <span class="app__caret"></span>
+                        </div>
+                        <div class="app__paragraph">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur.
+                        </div>
+                    </div>
+                    <div class="app__sidebar"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="settings">
+        <form class="settings__box">
+            <div class="step">
+                2. Tweak settings if you want to.
+            </div>
+
+            <div class="settings__group">
+                <div class="scard">
+                    <div class="scard__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox" id="settings__title-as-heading">
+                    </div>
+                    <div class="scard__title">
+                        Treat <em>Title</em> as <code>&lt;h1&gt;</code>
+                    </div>
+                    <div class="scard__detail">
+                        Normally is <em>Heading 1 - 6</em> treated as <code>&lt;h1&gt; - &lt;h6&gt;</code> and <em>Title</em> as a regular paragraph. But if you check this box, <em>Title</em> will become the <code>&lt;h1&gt;</code> and all headings will be shifted. However that means that the sixth heading will be treated as a paragraph.
+                    </div>
+                </div>
+                <div class="scard">
+                    <div class="scard__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox" id="settings__close-headings">
+                    </div>
+                    <div class="scard__title">
+                        Close headings
+                    </div>
+                    <div class="scard__detail">
+                        If checked, headings in markdown will be closed with <code>#</code> symbols.
+                        <pre style="text-align: center">### Heading ###</pre>
+                    </div>
+                </div>
+                <div class="scard">
+                    <div class="scard__title">
+                        List bullets
+                    </div>
+                    
+                    <div class="radio">
+                        <input type="radio" checked name="settings__list-bullets" value="*">
+                        <label class="radio__label">Asterisk</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="settings__list-bullets" value="-">
+                        <label class="radio__label">Dash</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="settings__list-bullets" value="custom">
+                        <input
+                            class="radio__label"
+                            id="settings__custom-bullet"
+                            type="text"
+                            value=""
+                            maxlength="1"
+                            placeholder="Custom..."
+                        >
+                    </div>
+
+                    <div class="scard__detail" style="margin-top: 10px">
+                        Character to be used for unordered lists as the bullet.
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings__group">
+                <div class="scard">
+                    <div class="scard__title">
+                        Markdown indentation
+                    </div>
+                    <select id="settings__indentation" class="settings__options">
+                        <option value="tab">Tab</option>
+                        <option value="1">1 space</option>
+                        <option value="2">2 spaces</option>
+                        <option value="4">4 spaces</option>
+                    </select>
+                    <div class="scard__detail">
+                        How to indent the markdown output.
+                    </div>
+                </div>
+                <div class="scard">
+                    <div class="scard__title">
+                        Clipboard data type
+                    </div>
+                    <select id="settings__clipboard" class="settings__options">
+                        <option value="text/html">text/html</option>
+                        <option value="text/plain">text/plain</option>
+                    </select>
+                     <div class="scard__detail">
+                        What type to get from clipboard. If copying from OneNote, leave this to default.
+                    </div>
+                </div>
+                <div class="scard">
+                    <div class="scard__title">
+                        OneNote version
+                    </div>
+                    <select id="settings__version" class="settings__options">
+                        <option value="null">Don't force</option>
+                        <option value="Microsoft OneNote 15">MS OneNote 2013</option>
+                        <option value="Microsoft OneNote 14">MS OneNote 2010</option>
+                    </select>
+                     <div class="scard__detail">
+                        Force interpretation to a given OneNote version. <a id="settings__version-help" href="#">What?</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="converter">
+        <div class="converter__box">
+            
+            <div class="step">
+                3. Paste clipboard into the box below.
+            </div>
+
+            <div class="converter__in" id="inputDiv" contenteditable="true"></div>
+
+            <div class="step">
+                4. Take your markdown output.
+            </div>
+            
+            <textarea class="converter__out" id="outputPre" placeholder="Output..."></textarea>
+
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="about__box">
+
+            <div class="step step_dark">
+                5. See what works.
+            </div>
+
+            <p class="about__p">Hello, this is a tool I made for myself and shared just for fun so it doesn't support everything and may be buggy. Here are supported features of OneNote:</p>
+
+            <ul class="about__ul">
+                <li>Paragraphs</li>
+                <li>Italic and bold</li>
+                <li>Title</li>
+                <li>Heading 1 to 6</li>
+                <li>Ordered and unordered lists</li>
+            </ul>
+
+            <p class="about__p">If you do some tweaks to match your needs, just send a pull request to share them. Here is the <a class="about__a" href="https://github.com/Jirka-Mayer" target="_blank">repository</a>.</p>
+            
+        </div>
+    </section>
+
+    <script src="oneNoteToMarkdown.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
