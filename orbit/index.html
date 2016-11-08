@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <title>Orbit</title>
+</head>
+<body>
+
+    <style>
+
+        body {
+            margin: 0;
+            overflow: hidden;
+
+            background: #ECE5F0;
+        }
+
+        #fps, #controls, #info-box, #info-trigger {
+            position: absolute;
+            padding: 10px;
+            margin: 5px;
+
+            background: #003B36;
+            color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+
+            font-family: monospace;
+        }
+
+        #fps {
+            top: 0;
+            left: 0;
+        }
+
+        #controls {
+            left: 0;
+            bottom: 0;
+        }
+
+        #controls > * {
+            vertical-align: middle;
+        }
+
+        #info-box {
+            display: none;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #info-box td {
+            padding: 5px;
+        }
+
+        #info-trigger {
+            bottom: 0;
+            right: 0;
+
+            font-size: 25px;
+            cursor: pointer;
+
+            border: none;
+        }
+
+        #info-trigger:hover {
+            background: white;
+            color: black;
+        }
+
+    </style>
+
+    <canvas id="graphics"></canvas>
+
+    <div id="fps"></div>
+
+    <div id="controls">
+        <label for="size-slider">Velikost</label>
+        <input id="size-slider" type="range" min="2" max="40" value="4">
+        <br>
+
+        <label for="mass-slider">Hmotnost</label>
+        <input id="mass-slider" type="range" min="0.1" max="5" value="1">
+        <br>
+
+        <label for="static-checkbox">Statický</label>
+        <input id="static-checkbox" type="checkbox">
+
+        <hr style="margin: 10px 0">
+
+        <select id="load-selection" style="width: 100%;">
+            <option value="starPlanetMoon" selected>Hvězda, planeta a mesíc</option>
+            <option value="binaryStar">Dvojhvězda</option>
+            <option value="starNeutronStar">Hvězda a neutronová hvězda</option>
+        </select>
+    </div>
+
+    <button id="info-trigger">?</button>
+
+    <div id="info-box">
+        <h3>Ovládání</h3>
+
+        <table>
+            <tr>
+                <td>Myš</td>
+                <td>přidávání objektů</td>
+            </tr>
+            <tr>
+                <td>Šipky</td>
+                <td>pohyb kamery</td>
+            </tr>
+            <tr>
+                <td>+, - nebo &lt;, &gt;</td>
+                <td>přibližování a oddalování</td>
+            </tr>
+            <tr>
+                <td>P</td>
+                <td>pauza</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="Game.js"></script>
+    <script src="GameTime.js"></script>
+    <script src="Vector.js"></script>
+    <script src="Constants.js"></script>
+    <script src="UI.js"></script>
+    <script src="Camera.js"></script>
+    <script src="BodyCreator.js"></script>
+    <script src="InfoBox.js"></script>
+    <script src="WorldLoader.js"></script>
+    <script src="World.js"></script>
+    <script src="Body.js"></script>
+    <script>
+
+        // create game instance
+        var game = new Game()
+
+        // run the game
+        game.run()
+
+    </script>
+    
+</body>
+</html>
