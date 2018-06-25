@@ -1,0 +1,328 @@
+.ui-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-container {
+  margin: 0 10%;
+}
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1000;
+  background: rgba(0,0,0,0.7);
+  overflow: auto;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-window {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 500px;
+  margin: 20px;
+  padding: 0;
+  background: #eee;
+}
+.modal-splitter {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid #808080;
+}
+.modal-contents {
+  padding: 20px 20px;
+}
+.modal-head {
+  padding: 20px 20px;
+}
+.modal-title {
+  padding: 0;
+  margin: 0;
+  color: rgba(0,0,0,0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.modal-foot {
+  padding: 10px 20px;
+  text-align: right;
+}
+.menu {
+  background: #444;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  margin-bottom: 50px;
+}
+.menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10%;
+}
+.menu-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #33c3da;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+.menu-item:hover {
+  background: #666;
+}
+.table {
+  position: relative;
+  width: 100%;
+  color: rgba(0,0,0,0.8);
+  font-size: 22px;
+  font-family: "Roboto";
+  border: 0;
+  border-collapse: collapse;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  background: #fff;
+}
+.table tr:nth-child(even) {
+  background: #eee;
+}
+.table td {
+  padding: 5px 10px;
+  margin: 0;
+}
+.table th {
+  background: #ddd;
+  text-align: left;
+  padding: 0.2em 0.5em;
+}
+.table .clickable-text {
+  cursor: pointer;
+}
+.table .clickable-text:hover {
+  color: #29a2b5;
+}
+.table .icon-button {
+  position: relative;
+  display: block;
+  top: 0;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 0;
+}
+.table .icon-button:hover {
+  color: #29a2b5;
+}
+.table tr:hover .icon-button {
+  opacity: 1;
+}
+.heading {
+  padding: 0;
+  margin: 5px 0;
+  color: rgba(0,0,0,0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+.input-label {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  color: rgba(0,0,0,0.7);
+  font-weight: 800;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.input-field {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #808080;
+  resize: none;
+}
+.input-field:hover,
+.input-field:focus {
+  background: rgba(0,0,0,0.05);
+  border-color: #29a2b5;
+}
+.input-field::-moz-selection {
+  background: rgba(41,162,181,0.5);
+}
+.input-field::selection {
+  background: rgba(41,162,181,0.5);
+}
+.input-state {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  color: rgba(0,0,0,0.4);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.input-state.invalid {
+  color: rgba(41,162,181,0.9);
+}
+.button {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5px;
+  padding: 0.5em 3em;
+  color: rgba(0,0,0,0.7);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: none;
+  border: 3px solid #808080;
+  outline: none;
+  cursor: pointer;
+}
+.button:focus {
+  border: 3px solid #29a2b5;
+  background: rgba(0,0,0,0.05);
+}
+.button:hover {
+  border: 3px solid #29a2b5;
+  background: rgba(41,162,181,0.2);
+}
+.button.big {
+  font-size: 25px;
+}
+.button.primary {
+  background: #29a2b5;
+  color: rgba(255,255,255,0.9);
+  border-color: #1f8a9a;
+}
+.button.primary:focus {
+  border-color: #63c3d2;
+  background: #29a2b5;
+}
+.button.primary:hover {
+  border-color: #63c3d2;
+  background: #35b7cc;
+}
+.app-welcome {
+  margin: 50px 0;
+  text-align: center;
+}
+.app-welcome h1 {
+  padding: 0;
+  margin: 5px 0;
+  color: rgba(0,0,0,0.7);
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.app-welcome h2 {
+  padding: 0;
+  margin: 5px 0;
+  color: rgba(0,0,0,0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.file-page-actions {
+  margin: 50px 0;
+  text-align: center;
+}
+.transaction-creator {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  background: #fff;
+  margin-bottom: 50px;
+}
+.transaction-creator .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+.transaction-creator .row:nth-child(even) {
+  background: #eee;
+}
+.transaction-creator .row > .input-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.transaction-list {
+  margin-bottom: 100px;
+}
+.overview-page {
+  margin-bottom: 100px;
+}
+.overview-page .current-state {
+  margin-bottom: 50px;
+}
+.overview-page .over-time {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+.account-page {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.account-page .default-account {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.account-page .account-page-actions {
+  text-align: center;
+  margin: 20px 0;
+}

@@ -1,0 +1,13 @@
+/*
+    Styles for the window containing the application instance
+ */
+body {
+  background: #eee;
+  margin: 0;
+  overflow: auto;
+}
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
