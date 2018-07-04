@@ -6134,8 +6134,13 @@ var TransactionPage = function (_Page) {
     }, {
         key: "editTransaction",
         value: function editTransaction(id) {
-            this.app.modals.show(new TransactionDetailModal(this.app.file.getTransaction(id), this.app.file, this.refreshTransactionList.bind(this) // submit callback
-            ));
+            var _this2 = this;
+
+            this.app.modals.show(new TransactionDetailModal(this.app.file.getTransaction(id), this.app.file, function () {
+                // submit callback
+                _this2.app.file.repairTransactionOrder(id);
+                _this2.refreshTransactionList();
+            }));
         }
 
         /**
@@ -20437,6 +20442,21 @@ var File = function () {
             return this.transactions.find(function (x) {
                 return x.id == id;
             }) || null;
+        }
+
+        /**
+         * Zařadí transakci na správné místo poté co bylo upraveno její datum
+         */
+
+    }, {
+        key: "repairTransactionOrder",
+        value: function repairTransactionOrder(id) {
+            var transaction = this.getTransaction(id);
+
+            if (transaction == null) throw new Error("Given transaction is not in this file.");
+
+            this.removeTransaction(transaction);
+            this.insertTransaction(transaction);
         }
     }], [{
         key: "deserialize",
